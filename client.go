@@ -4,8 +4,9 @@ import (
 	"github.com/hashicorp/vault/api"
 )
 
+// Vault api.Logical implements this interface.
+// Useful for generating mocks.
 type Logical interface {
-	Read(path string) (*api.Secret, error)
 	Write(path string, data map[string]interface{}) (*api.Secret, error)
 }
 
@@ -13,10 +14,13 @@ type Conn struct {
 	client Logical
 }
 
-func (c *Conn) Auth(f func(c *Conn) (*api.Secret, error)) (map[string]interface{}, error) {
+// Auth wraps different authentication functions. It executes the function pointed to by f,
+// which is in turn a function facilitating some sort of authentication.
+// It returns a vault api.SecretAuth structure and an error.
+func (c *Conn) Auth(f func(c *Conn) (*api.Secret, error)) (*api.SecretAuth, error) {
 	s, err := f(c)
 	if err != nil {
 		return nil, err
 	}
-	return s.Data, nil
+	return s.Auth, nil
 }
