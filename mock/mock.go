@@ -45,3 +45,16 @@ func (m *MockLogical) Write(path string, data map[string]interface{}) (*api.Secr
 func (mr *MockLogicalMockRecorder) Write(path, data interface{}) *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Write", reflect.TypeOf((*MockLogical)(nil).Write), path, data)
 }
+
+// Read mocks base method
+func (m *MockLogical) Read(path string) (*api.Secret, error) {
+	ret := m.ctrl.Call(m, "Read", path)
+	ret0, _ := ret[0].(*api.Secret)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// Read indicates an expected call of Read
+func (mr *MockLogicalMockRecorder) Read(path interface{}) *gomock.Call {
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Read", reflect.TypeOf((*MockLogical)(nil).Read), path)
+}
