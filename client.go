@@ -11,7 +11,7 @@ type Logical interface {
 }
 
 type Conn struct {
-	client Logical
+	Client Logical
 }
 
 // Auth wraps different authentication functions. It executes the function pointed to by f,

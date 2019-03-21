@@ -9,7 +9,7 @@ import (
 // Ref: https://www.vaultproject.io/docs/auth/github.html
 func Github(t string) func(c *Conn) (*api.Secret, error) {
 	return func(c *Conn) (*api.Secret, error) {
-		return c.client.Write("/auth/github/login", map[string]interface{}{
+		return c.Client.Write("/auth/github/login", map[string]interface{}{
 			"token": t,
 		})
 	}

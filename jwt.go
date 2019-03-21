@@ -7,7 +7,7 @@ import "github.com/hashicorp/vault/api"
 // Ref: https://www.vaultproject.io/docs/auth/jwt.html
 func JWT(t, r string) func(c *Conn) (*api.Secret, error) {
 	return func(c *Conn) (*api.Secret, error) {
-		return c.client.Write("/auth/jwt/login", map[string]interface{}{
+		return c.Client.Write("/auth/jwt/login", map[string]interface{}{
 			"jwt":  t,
 			"role": r,
 		})

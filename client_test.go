@@ -27,7 +27,7 @@ func TestConn_OktaAuth(t *testing.T) {
 	vcli.EXPECT().Write(gomock.Any(), gomock.Any()).Return(writeResult, nil)
 
 	cc := &Conn{
-		client: vcli,
+		Client: vcli,
 	}
 
 	is := is.New(t)
@@ -46,7 +46,7 @@ func TestConn_GithubAuth(t *testing.T) {
 	}).Return(writeResult, nil)
 
 	cc := &Conn{
-		client: vcli,
+		Client: vcli,
 	}
 
 	is := is.New(t)
@@ -66,7 +66,7 @@ func TestConn_JWTAuth(t *testing.T) {
 	}).Return(writeResult, nil)
 
 	cc := &Conn{
-		client: vcli,
+		Client: vcli,
 	}
 
 	is := is.New(t)
