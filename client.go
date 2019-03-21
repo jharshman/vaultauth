@@ -8,6 +8,7 @@ import (
 // Useful for generating mocks.
 type Logical interface {
 	Write(path string, data map[string]interface{}) (*api.Secret, error)
+	Read(path string) (*api.Secret, error)
 }
 
 type Conn struct {
