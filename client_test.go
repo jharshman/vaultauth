@@ -1,4 +1,4 @@
-package main
+package vaultutil
 
 import (
 	"github.com/golang/mock/gomock"
