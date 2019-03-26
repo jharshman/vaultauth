@@ -8,6 +8,7 @@ Simple auth utilities.
 ## Usage
 
 Add the module:
+
 `$ go get -m github.com/jharshman/vaultutil@v0.0.2`
 
 Example:
@@ -33,13 +34,4 @@ vClient.SetToken(s.ClientToken)
 
 // you can now use conn.Client to do whatever operations
 // are permitted by the policy bound to the resulting ClientToken.
-```
-
-You may also write your own auth function.
-```
-cc.Auth(func(u, p string) func(c *Conn) (*api.Secret, error) {
-	return func(c *Conn) (*api.Secret, error) {
-		return &api.Secret{}, nil
-	}
-}("someuser", "somepassword"))
 ```
