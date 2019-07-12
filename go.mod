@@ -1,4 +1,4 @@
-module github.com/jharshman/vaultutil
+module github.com/jharshman/vaultauth
 
 require (
 	contrib.go.opencensus.io/exporter/ocagent v0.4.7 // indirect
@@ -38,6 +38,7 @@ require (
 	github.com/golang/groupcache v0.0.0-20190129154638-5b532d6fd5ef // indirect
 	github.com/golang/mock v1.2.0
 	github.com/golang/protobuf v1.3.1 // indirect
+	github.com/golang/snappy v0.0.1 // indirect
 	github.com/google/gofuzz v0.0.0-20170612174753-24818f796faf // indirect
 	github.com/googleapis/gax-go v2.0.2+incompatible // indirect
 	github.com/gorhill/cronexpr v0.0.0-20180427100037-88b0669f7d75 // indirect
@@ -49,6 +50,9 @@ require (
 	github.com/hashicorp/go-hclog v0.8.0 // indirect
 	github.com/hashicorp/go-memdb v0.0.0-20190306140544-eea0b16292ad // indirect
 	github.com/hashicorp/go-plugin v0.0.0-20190220160451-3f118e8ee104 // indirect
+	github.com/hashicorp/go-retryablehttp v0.5.2 // indirect
+	github.com/hashicorp/go-rootcerts v1.0.1 // indirect
+	github.com/hashicorp/go-sockaddr v1.0.2 // indirect
 	github.com/hashicorp/go-version v1.1.0 // indirect
 	github.com/hashicorp/golang-lru v0.5.1 // indirect
 	github.com/hashicorp/nomad v0.8.7 // indirect
@@ -70,7 +74,6 @@ require (
 	github.com/influxdata/platform v0.0.0-20190117200541-d500d3cf5589 // indirect
 	github.com/jeffchao/backoff v0.0.0-20140404060208-9d7fd7aa17f2 // indirect
 	github.com/jefferai/jsonx v1.0.0 // indirect
-	github.com/jharshman/vaultauth v0.0.0-20190315230707-e81528635d4b
 	github.com/jonboulle/clockwork v0.1.0 // indirect
 	github.com/json-iterator/go v1.1.6 // indirect
 	github.com/keybase/go-crypto v0.0.0-20190312101036-b475f2ecc1fe // indirect
@@ -89,6 +92,7 @@ require (
 	github.com/pkg/errors v0.8.1 // indirect
 	github.com/pquerna/cachecontrol v0.0.0-20180517163645-1555304b9b35 // indirect
 	github.com/pquerna/otp v1.1.0 // indirect
+	github.com/ryanuber/go-glob v1.0.0 // indirect
 	github.com/samuel/go-zookeeper v0.0.0-20180130194729-c4fab1ac1bec // indirect
 	github.com/sirupsen/logrus v1.4.0 // indirect
 	github.com/soheilhy/cmux v0.1.4 // indirect
@@ -96,7 +100,9 @@ require (
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20190109142713-0ad062ec5ee5 // indirect
 	github.com/ugorji/go/codec v0.0.0-20190316192920-e2bddce071ad // indirect
 	github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2 // indirect
+	golang.org/x/net v0.0.0-20190313220215-9f648a60d977 // indirect
 	golang.org/x/oauth2 v0.0.0-20190319182350-c85d3e98c914 // indirect
+	golang.org/x/time v0.0.0-20190308202827-9d24e82272b4 // indirect
 	google.golang.org/api v0.2.0 // indirect
 	gopkg.in/asn1-ber.v1 v1.0.0-20181015200546-f715ec2f112d // indirect
 	gopkg.in/gorethink/gorethink.v4 v4.1.0 // indirect

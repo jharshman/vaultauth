@@ -1,4 +1,4 @@
-package vaultutil
+package vaultauth
 
 import (
 	"fmt"

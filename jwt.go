@@ -1,4 +1,4 @@
-package vaultutil
+package vaultauth
 
 import "github.com/hashicorp/vault/api"
 
